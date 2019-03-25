@@ -104,27 +104,6 @@ body
 	width: 100%
 	min-height: 100vh
 
-	&.main
-		background: var(--secondColor)
-		height: 100vh
-		overflow: hidden
-
-	&:after
-		content: ""
-		position: fixed 0
-		background: url("../img/loader.svg") center no-repeat
-		background-color: var(--secondColor)
-		z-index: 100
-		opacity: 0
-		pointer-events: none
-		transition: opacity .3s ease
-
-	&.loading
-
-		&:after
-			opacity: 1
-			pointer-events: all
-
 select
 	-webkit-appearance: none
 	/* for FF */

@@ -8,6 +8,28 @@ html(lang="ru")
 	body.main.loading
 		include inc/header.pug
 		main#content
+			.top-block
+				figure._bg
+					img(src="img/photos/top-bg.jpg")
+				._text
+					.wrapper
+						.top-text
+							._left
+								.top-titles
+									._title Coding Class
+									._subtitle Бесплатный курс по основам web-разработки
+							._right
+								.registration
+									._title Старт курса 12 апреля 2019 г.
+									._text Заполните форму получите приглашение к участию в двухмесячном курсе
+									._btn
+										a.gradient-btn.fancybox(href="#") Записаться
+						.top-block__text-sponsors
+							.sponsors
+								- for (let i = 0; i < 5; i++)
+									._iteam
+										a.sponsor(href="#")
+											img(src="img/photos/sponsor-"+i+".png")
 		#sprite(style="display: none")
 			include symbol/sprite.svg
 		include inc/scripts.pug
