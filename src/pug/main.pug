@@ -8,7 +8,7 @@ html(lang="ru")
 	body.main.loading
 		include inc/header.pug
 		main#content
-			.top-block
+			section.top-block
 				figure._bg
 					img(src="img/photos/top-bg.jpg")
 				._text
@@ -26,10 +26,99 @@ html(lang="ru")
 										a.gradient-btn.fancybox(href="#") Записаться
 						.top-block__text-sponsors
 							.sponsors
-								- for (let i = 0; i < 5; i++)
+								- for (let i = 0; i < 4; i++)
 									._iteam
 										a.sponsor(href="#")
-											img(src="img/photos/sponsor-"+i+".png")
-		#sprite(style="display: none")
+											if (i > 2)
+												img(src="img/photos/sponsor-"+(i+1)+".png")
+											else
+												img(src="img/photos/sponsor-"+i+".png")
+			section.advantages__cont
+				.wrapper
+					.advantages
+						._item
+							.advantage
+								figure._img
+									img(src="img/photos/advantages-0.png")
+								._text Начальный и средний уровень знаний
+						._item
+							.advantage
+								figure._img
+									img(src="img/photos/advantages-1.png")
+								._text 2 месяца 
+									br
+									| 6 часов в неделю
+						._item
+							.advantage
+								figure._img
+									img(src="img/photos/advantages-2.png")
+								._text Оплачиваемая стажировка
+						._item
+							.advantage
+								figure._img
+									img(src="img/photos/advantages-3.png")
+								._text Преподаватели практики
+			section.orgs__cont
+				.wrapper
+					.orgs
+						._title Организаторы курса
+						._items
+							.orgs-list
+								each person, i in [{name: "Ильдар Чуракаев", whois: "Основатель digital-агенства Xpage", text: "«Ваш бизнес способен на большее»"}, {name: "Яровлав Голуб", whois: "Директор Intec", text: "\"Самый простой способ прийти к успеху - работать с теми, кто идёт к успеху\""}, {name: "Роман Тарасенко", whois: "Тезнический директор агенства маркетинговах коммуникаций «Цифровой элемент»", text: "«Нужно жить всегда влюбленным во что-нибудь недоступное тебе. Человек становится выше ростом от того, что тянется вверх»"}, {name: "Максим Усынин", whois: "Проректор МИДиС", text: "«Чтобы что-то сделать надо начать делать»"}, ]
+									._item
+										.person
+											figure._img
+												if (i > 0)
+													img(src="img/photos/person-"+(i+1)+".jpg")
+												else
+													img(src="img/photos/person-"+i+".jpg")
+											._name=person.name
+											._whois=person.whois
+											._text=person.text
+			section.programm__cont
+				figure.programm__cont-bg
+					img(src="img/photos/center-bg.png")
+				.wrapper
+					.programm
+						._who
+							.for-who
+								._title Для кого этот курс
+								._list
+									.for-items
+										._item
+											.for
+												figure._img
+													img(src="img/photos/ico-search.png")
+												._text Для студентов вузов, которым интересна веб-разработка
+										._item
+											.for
+												figure._img
+													img(src="img/photos/ico-search.png")
+												._text Для начинающих программистов, желающих получить практический опыт экспертов
+						._list
+							.for-who
+								._title Программа обучения
+							.programm-list
+								each item, i in [{subj: "HTML/CSS", text: "Язык гипертекстовой разметки. Структура HTML-документа. HTML-формы. CSS3. Селекторы, атрибуты, псевдоклассы. Блочная вёрстка."}, {subj: "PHP", text: "Синтаксис. Управляющие конструкции и операторы. Пользовательские функции. Область видимости. Переменные и массивы. Классы и объекты. Сессии. Работа с файловой системой. Динамическая генерация страниц на стороне сервера."}, {subj: "Javascript", text: "Синтаксис. Управляющие конструкции и операторы. Функции и понятие контекста функции. Область видимости. Концепция объектной модели (DOM). Понятие прототипа и прототипного наследования. Манипуляции над объектами дерева DOM. События и обработка событий. Библиотека jQuery. Библиотека Lodash. Ajax."}, {subj: "PHP, MySQL, 1С-Bitrix.", text: "PHP+ / MySQL / Обзор современных CMS на примере Bitrix."}, ]
+									._item
+										.programm-item
+											figure._img
+												img(src="img/photos/prg-"+i+".jpg")
+											._title="Блок "+(i+1)+"."
+											._subject=item.subj
+											._text=item.text
+			section.how__cont
+				.wrapper
+					.how
+						._title Как происходит обучение
+						._list
+							.how-items
+								each item, i in ["Вы посещаете лекции и пррктические занятия 2-3 раза в неделю", "Преподаватели подбирают материалы для самостоятельно изучения", "Эксперты курса проверяют ваши домашние задания и Вы получаете обратную связь", "Оплачиваемая стажировка по окончанию обучения с возможностью трудоустройства", ]
+									._item
+										.how-item
+											figure._img
+												img(src="img/photos/how-"+i+".jpg")
+											._text=item
+		//- #sprite(style="display: none")
 			include symbol/sprite.svg
 		include inc/scripts.pug

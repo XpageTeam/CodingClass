@@ -9,6 +9,8 @@ import $ from "jquery"
 
 // import "./forms.js"
 
+import {sameHeights} from "x-widgets.js"
+
 
 window.$ = $;
 window.jQuery = $;
@@ -18,6 +20,8 @@ let scrollTimeout;
 document.addEventListener("DOMContentLoaded", e => {
 	require("./jquery.fancybox.js")
 	require("../css/jquery.fancybox.css")
+
+	sameHeights($(".person__whois"))
 	
 	$(".fancybox").fancybox({
 		trapFocus: false,
