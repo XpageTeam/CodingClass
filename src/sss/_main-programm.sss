@@ -82,4 +82,106 @@
 	&__text
 		margin: 25px 0 0
 		font-size: 14px
-		line-height: 1.6	
+		line-height: 1.6
+
+		padding-bottom: 30px
+		margin-bottom: 30px
+		position: relative
+
+		&:after
+			content: ""
+			position: absolute * * 0 calc(50% - 20px)
+			size: 40px 2px
+			background: #fe541e
+
+
+@media screen and (max-width: 1550px)
+	.programm
+		padding: 30px 0 40px
+
+		&__list
+			margin: 40px 0 0
+
+	.for-who
+
+		&__title
+			margin-bottom: 30px
+
+
+@media screen and (max-width: 1400px)
+	.programm
+
+		&__cont
+			margin: 40px 0 0
+
+
+@media screen and (max-width: 1300px)
+	.programm__cont-bg
+
+		img
+			min-height: 780px
+			object-fit: cover
+			object-position: center
+
+@media screen and (max-width: 1000px)
+	.programm
+
+		&__cont
+			background: #0a2146
+
+			&-bg
+				display: none
+
+			.wrapper
+				position: static
+
+@media screen and (max-width: 1000px) and (min-width: 660px)
+
+	.programm-list
+		border-bottom: none
+
+		&__item
+			width: 50%
+			border: none !important
+			border-bottom: 1px solid #fff !important
+
+			&:nth-child(odd)
+				border-right: 1px solid #fff !important
+
+@media screen and (max-width: 660px)
+	.for-who__title
+		margin-bottom: 25px
+		font-size: 22px
+
+	.for-items
+		margin: 0
+
+		&__item
+			width: 100%
+			margin: 0
+
+			&:not(:first-child)
+				margin: 20px 0 0
+
+	.for
+
+		&__img
+			margin-right: 20px
+			width: 70px
+			text-align: center
+
+			img
+				display: inline-block
+
+	.for-who
+
+		&__title
+			font-size: 22px
+
+	.programm-list
+		border-bottom: none
+
+		&__item
+			width: 100%
+			border-right: none !important
+			border-bottom: 1px solid #fff

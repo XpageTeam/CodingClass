@@ -23,11 +23,11 @@ html(lang="ru")
 									._title Старт курса 12 апреля 2019 г.
 									._text Заполните форму получите приглашение к участию в двухмесячном курсе
 									._btn
-										a.gradient-btn.fancybox(href="#") Записаться
+										a.gradient-btn(href="#") Записаться
 						.top-block__text-sponsors
 							.sponsors
 								- for (let i = 0; i < 4; i++)
-									._iteam
+									._item
 										a.sponsor(href="#")
 											if (i > 2)
 												img(src="img/photos/sponsor-"+(i+1)+".png")
@@ -39,24 +39,24 @@ html(lang="ru")
 						._item
 							.advantage
 								figure._img
-									img(src="img/photos/advantages-0.png")
+									img(src="img/photos/advantages-0.svg")
 								._text Начальный и средний уровень знаний
 						._item
 							.advantage
 								figure._img
-									img(src="img/photos/advantages-1.png")
+									img(src="img/photos/advantages-1.svg")
 								._text 2 месяца 
 									br
 									| 6 часов в неделю
 						._item
 							.advantage
 								figure._img
-									img(src="img/photos/advantages-2.png")
+									img(src="img/photos/advantages-2.svg")
 								._text Оплачиваемая стажировка
 						._item
 							.advantage
 								figure._img
-									img(src="img/photos/advantages-3.png")
+									img(src="img/photos/advantages-3.svg")
 								._text Преподаватели практики
 			section.orgs__cont
 				.wrapper
@@ -88,12 +88,12 @@ html(lang="ru")
 										._item
 											.for
 												figure._img
-													img(src="img/photos/ico-search.png")
+													img(src="img/photos/for-0.svg")
 												._text Для студентов вузов, которым интересна веб-разработка
 										._item
 											.for
 												figure._img
-													img(src="img/photos/ico-search.png")
+													img(src="img/photos/for-1.svg")
 												._text Для начинающих программистов, желающих получить практический опыт экспертов
 						._list
 							.for-who
@@ -103,9 +103,9 @@ html(lang="ru")
 									._item
 										.programm-item
 											figure._img
-												img(src="img/photos/prg-"+i+".jpg")
+												img(src="img/photos/prg-"+i+".svg")
 											._title="Блок "+(i+1)+"."
-											._subject=item.subj
+											//- ._subject=item.subj
 											._text=item.text
 			section.how__cont
 				.wrapper
@@ -117,8 +117,35 @@ html(lang="ru")
 									._item
 										.how-item
 											figure._img
-												img(src="img/photos/how-"+i+".jpg")
+												img(src="img/photos/how-"+i+".svg")
 											._text=item
+			section.top-block.-bot
+				figure._bg
+					img(src="img/photos/bot-bg.png")
+				._text
+					.wrapper
+						.top-contacts
+							._title Главный корпус МИДИС
+							address._address ул. Ворошилова, д. 12
+							address._phone
+								a(href="tel: +7-950-729-70-57") +7-950-729-70-57
+						.top-text
+							._left
+								.top-titles
+									._title Запишись на
+										br
+										| бесплатный курс
+							._right
+								a.gradient-btn(href="#") Записаться
+						.top-block__text-sponsors
+							.sponsors
+								- for (let i = 0; i < 4; i++)
+									._item
+										a.sponsor(href="#")
+											if (i > 2)
+												img(src="img/photos/sponsor-"+(i+1)+".png")
+											else
+												img(src="img/photos/sponsor-"+i+".png")
 		//- #sprite(style="display: none")
 			include symbol/sprite.svg
-		include inc/scripts.pug
+		//- include inc/scripts.pug

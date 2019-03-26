@@ -50,3 +50,40 @@
 	&__text
 		font-size: 0.92857rem
 		flex: 1 1 auto
+
+
+@media screen and (max-width: 1400px)
+	.orgs
+
+		&__cont
+			margin: 40px 0 0
+
+
+@media screen and (max-width: 1000px) and (min-width: 660px)
+	.orgs-list
+		margin: 0 0 -20px -20px
+
+		&__item
+			width: calc((100% - 20px * 2) / 2)
+			margin: 0 0 20px 20px
+
+@media screen and (max-width: 660px)
+	.orgs-list
+		margin: 0
+
+		&__item
+			width: 100%
+			margin: 0
+
+			&:not(:first-child)
+				margin: 25px 0 0
+
+	.orgs
+
+		&__title
+			font-size: 22px
+
+	.person
+
+		&__img
+			margin-bottom: 10px
