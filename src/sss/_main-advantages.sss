@@ -1,0 +1,45 @@
+.advantages
+
+	&__cont
+		margin: 95px 0 0
+
+.advantages
+	display: flex
+	flex-wrap: wrap
+
+	&__item
+		width: 25%
+		border: 1px solid #eeeeee
+		display: flex
+		flex-direction: column
+
+.advantage
+	flex: 1 1 auto
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	padding: 48px 30px 61px
+
+	&__img
+		flex: none
+
+		&:not(:last-child)
+			margin-bottom: 27px
+
+		img
+			display: block
+
+	&__text
+		text-align: center
+		flex: 1 1 auto
+		line-height: 1.6
+		font-size: 1.14286rem
+		padding-bottom: 25px
+		position: relative
+
+		&:after
+			position: absolute * * 0 calc(50% - 20px)
+			size: 40px 2px
+			background: #fe541e
+			content: ""
