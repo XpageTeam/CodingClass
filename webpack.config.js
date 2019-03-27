@@ -42,12 +42,12 @@ if (process.env.NODE_ENV === 'production') {
 
 module.exports = [{
 	entry: [
-		"babel-polyfill",
+		// "babel-polyfill",
 		"./src/js/common.js",
 	],
 	output: {
 		filename: "common.js",
-		path: path.resolve(__dirname, "./dist/js/"),
+		path: path.resolve(__dirname, "./docs/js/"),
 	},
 	watch: watch,
 	devtool: devtool,

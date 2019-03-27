@@ -10,14 +10,17 @@ html(lang="ru")
 		main#content
 			section.top-block
 				figure._bg
-					img(src="img/photos/top-bg.jpg")
+					img(src="img/photos/top-bg.png")
 				._text
 					.wrapper
 						.top-text
 							._left
 								.top-titles
 									._title Coding Class
-									._subtitle Бесплатный курс по основам web-разработки
+									._subtitle Бесплатный курс по основам веб-разработки от ведущих специалистов ТОП агентств Челябинска по версии 
+										a(target="_blank" href="https://tagline.ru/chelyabinsk/") Tagline 
+										| и 
+										a(target="_blank" href="http://www.ratingruneta.ru/web/chelyabinsk/") Рейтинг Рунета.
 							._right
 								.registration
 									._title Старт курса 12 апреля 2019 г.
@@ -70,28 +73,28 @@ html(lang="ru")
 											img(src="img/photos/person-0.jpg")
 										._name Ильдар Чуракаев
 										._whois Основатель<br> digital-агентства Xpage
-										._text «Ваш бизнес способен на большее»
+										//- ._text «Ваш бизнес способен на большее»
 								._item
 									.person
 										figure._img
 											img(src="img/photos/person-2.jpg")
 										._name Ярослав Голуб
 										._whois Директор<br> интернет-агентства Intec
-										._text "Самый простой способ прийти к успеху - работать с теми, кто идёт к успеху"
+										//- ._text "Самый простой способ прийти к успеху - работать с теми, кто идёт к успеху"
 								._item
 									.person
 										figure._img
 											img(src="img/photos/person-3.jpg")
 										._name Роман Тарасенко
-										._whois Технический директор агентства маркетинговых коммуникаций<br> «Цифровой элемент»
-										._text «Нужно жить всегда влюбленным во что-нибудь недоступное тебе. Человек становится выше ростом от того, что тянется вверх»
+										._whois Технический директор компании<br> «Цифровой элемент»
+										//- ._text «Нужно жить всегда влюбленным во что-нибудь недоступное тебе. Человек становится выше ростом от того, что тянется вверх»
 								._item
 									.person
 										figure._img
 											img(src="img/photos/person-4.jpg")
 										._name Максим Усынин
 										._whois Проректор МИДиС
-										._text «Чтобы что-то сделать надо начать делать»
+										//- ._text «Чтобы что-то сделать надо начать делать»
 
 
 			section.programm__cont
@@ -123,7 +126,7 @@ html(lang="ru")
 										.programm-item
 											figure._img
 												img(src="img/photos/prg-"+i+".svg")
-											._title="Блок "+(i+1)+"."
+											//- ._title="Блок "+(i+1)+"."
 											//- ._subject=item.subj
 											._text=item.text
 			section.how__cont
@@ -140,11 +143,11 @@ html(lang="ru")
 											._text=item
 			section.top-block.-bot
 				figure._bg
-					img(src="img/photos/bot-bg.png")
+					img(src="img/photos/bot-bg.jpg")
 				._text
 					.wrapper
 						.top-contacts
-							._title Главный корпус МИДИС
+							._title Главный корпус МИДиС
 							address._address ул. Ворошилова, д. 12
 							address._phone
 								a(href="tel: +7-950-729-70-57") +7-950-729-70-57
@@ -167,4 +170,4 @@ html(lang="ru")
 												img(src="img/photos/sponsor-"+i+".png")
 		//- #sprite(style="display: none")
 			include symbol/sprite.svg
-		//- include inc/scripts.pug
+		include inc/scripts.pug

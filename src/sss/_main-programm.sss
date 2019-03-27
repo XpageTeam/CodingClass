@@ -3,7 +3,7 @@
 
 	&__cont
 		position: relative
-		margin: 105px 0 0
+		margin: 110px 0 0
 
 		&-bg
 
@@ -18,13 +18,13 @@
 
 .programm
 	flex: 1 1 auto
-	padding: 100px 0 140px
+	padding: 20px 0 140px
 	display: flex
 	flex-direction: column
 	justify-content: center
 
 	&__list
-		margin: 125px 0 0
+		margin: 180px 0 0
 
 .for-who
 
@@ -58,31 +58,61 @@
 		line-height: calc(24 / 16)
 
 .programm-list
-	border: 1px solid #fff
+	border: 1px solid #394a79
 	display: flex
 	flex-wrap: wrap
 
 	&__item
 		width: 25%
 		padding: 25px 24px
+		display: flex
+		flex-direction: column
 
 		&:not(:nth-child(3n + 1)),
 		&:first-child
-			border-right: 1px solid #fff
+			border-right: 1px solid #394a79
+
+		&:nth-child(odd)
+
+			.programm-item
+
+				&__img
+
+					&:after
+						right: -1px
 
 .programm-item
 	text-align: center
+	flex: 1 1 auto
+	display: flex
+	flex-direction: column
 
 	&__img
-		margin-bottom: 20px
+		flex: none
+		// margin-bottom: 10px
+		// padding-bottom: 10px
+		position: relative
+		// padding: 0px
+		padding: 25px 24px
+		margin: -25px -24px
+
+		img
+			position: relative
+			z-index: 1
+
+		&:after
+			content: ""
+			position: absolute 0
+			background: linear-gradient(to left, #ea7760, #ef5050) 
 
 	&__title
 		margin-bottom: 3px
 
 	&__text
-		margin: 25px 0 0
+		margin: 75px 0 0
 		font-size: 14px
 		line-height: 1.6
+		flex: 1 1 auto
 
 		padding-bottom: 30px
 		margin-bottom: 30px
@@ -143,10 +173,10 @@
 		&__item
 			width: 50%
 			border: none !important
-			border-bottom: 1px solid #fff !important
+			border-bottom: 1px solid #394a79 !important
 
 			&:nth-child(odd)
-				border-right: 1px solid #fff !important
+				border-right: 1px solid #394a79 !important
 
 @media screen and (max-width: 660px)
 	.for-who__title
@@ -184,4 +214,4 @@
 		&__item
 			width: 100%
 			border-right: none !important
-			border-bottom: 1px solid #fff
+			border-bottom: 1px solid #394a79

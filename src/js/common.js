@@ -1,34 +1,70 @@
+import {TweenLite} from "gsap/TweenMax"
 import $ from "jquery"
-// import is from "is_js"
-
-// import "selectize/dist/js/selectize.min.js"
-
-// import "slick-carousel"
-// import "./standart-page.js"
-// import "./main-page.js"
-
-// import "./forms.js"
-
-import {sameHeights} from "x-widgets.js"
-
-
-window.$ = $;
-window.jQuery = $;
-
-let scrollTimeout;
 
 document.addEventListener("DOMContentLoaded", e => {
-	require("./jquery.fancybox.js")
-	require("../css/jquery.fancybox.css")
+	;(function(){
+		const animateElements = document.querySelectorAll(".advantage, .programm-item, .how-item");
 
-	sameHeights($(".person__whois"))
-	
-	$(".fancybox").fancybox({
-		trapFocus: false,
-		touch: false,
-		buttons: ["fullscreen", "slideShow", "close"],
-		beforeClose(instance, slide){
+		if (!animateElements.length)
+			return
 
+		for (var element of animateElements){
+			element.addEventListener("mouseenter", function(){
+				const el = this;
+
+				TweenLite.to(el, .25, {
+					y: -30,
+					onComplete(){
+						TweenLite.to(el, .25, {
+							y: 0
+						})
+					}
+				})
+			})
 		}
-	})
+	})()
+
+	;(function(){
+		const animateElements = document.querySelectorAll(".advantage, .programm-item, .person, .for, .how-item");
+
+		if (!animateElements.length)
+			return
+
+		for (var element of animateElements)
+			TweenLite.set(element, {
+				autoAlpha: 0
+			})
+
+		const forElements = _ => {
+			let i = 0;
+			for (var element of animateElements){
+				if (isScrolledIntoView(element) && element.getAttribute("style") == "visibility: hidden; opacity: 0;"){
+					showElement(element, i)
+					i++
+				}
+			}
+		}
+
+		forElements()
+
+		window.addEventListener("scroll", forElements)
+		window.addEventListener("tocuhmove", forElements)
+	})()
 })
+
+const showElement = (element, pos) => {
+	TweenLite.to(element, .4, {
+		autoAlpha: 1,
+		delay: pos * .2
+	})
+};
+
+function isScrolledIntoView(elem){
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
