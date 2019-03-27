@@ -23,7 +23,7 @@ html(lang="ru")
 									._title Старт курса 12 апреля 2019 г.
 									._text Заполните форму и получите приглашение к участию в двухмесячном курсе
 									._btn
-										a.gradient-btn(href="#") Записаться
+										a.gradient-btn(target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeKJCb8WBjhF0h2XJro2tpGICVXwul5za98w7sZ2gD9N1FzJA/viewform") Записаться
 						.top-block__text-sponsors
 							.sponsors
 								- for (let i = 0; i < 4; i++)
@@ -64,17 +64,36 @@ html(lang="ru")
 						._title Организаторы курса
 						._items
 							.orgs-list
-								each person, i in [{name: "Ильдар Чуракаев", whois: "Основатель digital-агентства Xpage", text: "«Ваш бизнес способен на большее»"}, {name: "Яровлав Голуб", whois: "Директор интернет-агентства Intec", text: "\"Самый простой способ прийти к успеху - работать с теми, кто идёт к успеху\""}, {name: "Роман Тарасенко", whois: "Технический директор агентства маркетинговых коммуникаций «Цифровой элемент»", text: "«Нужно жить всегда влюбленным во что-нибудь недоступное тебе. Человек становится выше ростом от того, что тянется вверх»"}, {name: "Максим Усынин", whois: "Проректор МИДиС", text: "«Чтобы что-то сделать надо начать делать»"}, ]
-									._item
-										.person
-											figure._img
-												if (i > 0)
-													img(src="img/photos/person-"+(i+1)+".jpg")
-												else
-													img(src="img/photos/person-"+i+".jpg")
-											._name=person.name
-											._whois=person.whois
-											._text=person.text
+								._item
+									.person
+										figure._img
+											img(src="img/photos/person-0.jpg")
+										._name Ильдар Чуракаев
+										._whois Основатель<br> digital-агентства Xpage
+										._text «Ваш бизнес способен на большее»
+								._item
+									.person
+										figure._img
+											img(src="img/photos/person-2.jpg")
+										._name Ярослав Голуб
+										._whois Директор<br> интернет-агентства Intec
+										._text "Самый простой способ прийти к успеху - работать с теми, кто идёт к успеху"
+								._item
+									.person
+										figure._img
+											img(src="img/photos/person-3.jpg")
+										._name Роман Тарасенко
+										._whois Технический директор агентства маркетинговых коммуникаций<br> «Цифровой элемент»
+										._text «Нужно жить всегда влюбленным во что-нибудь недоступное тебе. Человек становится выше ростом от того, что тянется вверх»
+								._item
+									.person
+										figure._img
+											img(src="img/photos/person-4.jpg")
+										._name Максим Усынин
+										._whois Проректор МИДиС
+										._text «Чтобы что-то сделать надо начать делать»
+
+
 			section.programm__cont
 				figure.programm__cont-bg
 					img(src="img/photos/center-bg.png")
@@ -136,7 +155,7 @@ html(lang="ru")
 										br
 										| бесплатный курс
 							._right
-								a.gradient-btn(href="#") Записаться
+								a.gradient-btn(target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeKJCb8WBjhF0h2XJro2tpGICVXwul5za98w7sZ2gD9N1FzJA/viewform") Записаться
 						.top-block__text-sponsors
 							.sponsors
 								- for (let i = 0; i < 4; i++)
