@@ -2,11 +2,80 @@
 
 	&__cont
 		margin: 87px 0 0
+		overflow: hidden
 
 	&__title
 		text-align: center
 		font-size: 2.14286rem
 		margin-bottom: 46px
+
+	&__slider-cont
+		margin: 105px 0 0
+		position: relative
+
+		.slick
+
+			&-list
+				overflow: visible
+
+			&-arrow
+				border-radius: 50%
+				width: 40px
+				height: 40px
+				position: absolute
+				top: calc(50% - 20px)
+				display: block
+				padding: 0
+				overflow: hidden
+				text-indent: -9999px
+				background: radial-gradient(#ea7760,#ef5050)
+				z-index: 2
+
+				&:after
+					content: ""
+					top: calc(50% - 5px)
+					position: absolute
+					width: 10px
+					height: 10px
+					border-top: 1px solid #fff
+					border-right: 1px solid #fff
+
+			&-prev
+				left: vw(60)
+
+				&:after
+					transform: rotate(-135deg)
+					right: calc(50% - 7px)
+
+			&-next
+				right: vw(60)
+
+				&:after
+					transform: rotate(45deg)
+					right: calc(50% - 3px)
+
+.how-slider
+	margin: 0 -20px
+	position: static !important
+
+	&:not(.slick-initialized)
+		display: flex
+
+		.how-slider
+
+			&__slide
+
+				&:nth-child(n + 3)
+					display: none
+
+	&__slide
+		flex: none
+		padding: 0 20px
+		display: block !important
+
+		img
+			display: block
+			width: 100%
 
 .how-items
 	display: flex
@@ -31,7 +100,7 @@
 @media screen and (max-width: 1400px)
 	.how
 
-		&__cont
+		&__cont, &__slider-cont
 			margin: 40px 0 0
 
 @media screen and (max-width: 1000px) and (min-width: 660px)

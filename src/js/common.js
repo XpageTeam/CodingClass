@@ -1,5 +1,7 @@
 import {TweenLite} from "gsap/TweenMax"
 import $ from "jquery"
+import "slick-slider/slick/slick.js"
+require("slick-slider/slick/slick.css")
 
 document.addEventListener("DOMContentLoaded", e => {
 	;(function(){
@@ -50,6 +52,19 @@ document.addEventListener("DOMContentLoaded", e => {
 		window.addEventListener("scroll", forElements)
 		window.addEventListener("tocuhmove", forElements)
 	})()
+
+	$(".how-slider").slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 660,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
+	})
 })
 
 const showElement = (element, pos) => {

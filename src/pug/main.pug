@@ -10,7 +10,7 @@ html(lang="ru")
 		main#content
 			section.top-block
 				figure._bg
-					img(src="img/photos/top-bg.png")
+					img(src="img/photos/new-top-bg.jpg")
 				._text
 					.wrapper
 						.top-text
@@ -141,6 +141,14 @@ html(lang="ru")
 											figure._img
 												img(src="img/photos/how-"+i+".svg")
 											._text=item
+				.how__slider-cont
+					.wrapper
+						.how
+							._slider
+								.how-slider
+									- for (let i = 0; i < 15; i++)
+										figure._slide
+											img(src="img/photos/slider-"+i+".jpg")
 			section.top-block.-bot
 				figure._bg
 					img(src="img/photos/bot-bg.jpg")
